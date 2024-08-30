@@ -1,0 +1,24 @@
+﻿@model User
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SignIn</title>
+</head>
+<body>
+    <p>@ViewBag.Error</p>
+    <form asp-controller="Users" asp-action="SignIn">
+        <div class="my-2">
+            <label asp-for="UserName"></label>
+            <input asp-for="UserName" class="form-control" />
+        </div>
+        <div class="my-2">
+            <label asp-for="Password">Password</label>
+            <input asp-for="Password" class="form-control" />
+        </div>
+        <input type="submit" class="btn btn-danger" value="Register" />
+    </form>
+</body>
+</html>
